@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Media queries</title>
+  </head>
+  <style>
+
+    div.box {
+      display: inline-block;
+      width: 150px;
+      height: 150px;
+      margin: 5px;
+      border: 1px solid gray;
+    }
+
+    /* min and max width */
+
+    @media(min-width: 700px) {
+
+      #box1 {
+        background: #ffddd6;
+      }
+    }
+
+    @media(max-width: 700px) {
+
+      #box2 {
+        background: #ffddd6;
+      }
+    }
+
+    /* Also available for heights */
+
+    /* Portrait */
+
+    @media(orientation: portrait) {
+
+      #box3 {
+        background: #cde8ff;
+      }
+    }
+
+    /* Landscape */
+
+    @media(orientation: landscape) {
+
+      #box4 {
+        background: #cde8ff;
+      }
+    }
+
+    /* Combining */
+
+    @media(min-width: 500px) and (orientation: portrait){
+
+      #box5 {
+        background: #d2ffc5;
+      }
+    }
+
+  </style>
+  <body>
+
+    <div id="box1" class="box">Red if min width is 700px</div>
+
+    <div id="box2" class="box">Red if max width is 700px</div>
+
+    <div id="box3" class="box">Blue if screen is portrait</div>
+
+    <div id="box4" class="box">Blue if screen is landscape</div>
+
+    <div id="box5" class="box">Green min width is 500px and portrait</div>
+
+  </body>
+</html>

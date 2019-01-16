@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+
+      // Declaration
+
+      var car1 = {
+        make: 'Volkswagen',
+        model: 'EOS'
+      };
+
+      console.log('Car:', car1);
+
+      // Access properties
+
+      console.log('Model:', car1.model);
+      console.log('Model (brakets):', car1['model']);
+
+      car1.model = 'Golf';
+      car1.year = 2018;
+
+      console.log('Modified car:', car1);
+
+      // Object references (same behaviour for arrays)
+
+      var car2 = car1;
+
+      car2['model'] = 'Polo';
+
+      console.log('car1:', car1);
+      console.log('car2:', car1);
+
+      // Also, object parameters are references
+
+      var a = 1;
+      var obj = {key: 'value'};
+
+      function modifyParamters(basic, object) {
+        basic = 2;
+        object.key = 'changed-value';
+      }
+
+      modifyParamters(a, obj);
+
+      console.log('a:', a);
+      console.log('obj:', obj);
+
+      // Extend objects
+
+      var obj1 = {
+        a: 1,
+        b: 2,
+        c: 3
+      };
+
+      var obj2 = {
+        d: 4,
+        e: 5
+      };
+
+      var obj3 = Object.assign(obj1, obj2);
+
+      console.log('Extend objects');
+      console.log('obj1', obj1);
+      console.log('obj3', obj3);
+
+      // We don't want to modify the existing object:
+
+      obj1 = {
+        a: 1,
+        b: 2,
+        c: 3
+      };
+
+      obj2 = {
+        d: 4,
+        e: 5
+      };
+
+      obj3 = Object.assign({}, obj1, obj2);
+
+      console.log('Preserve objects after extend');
+      console.log('obj1', obj1);
+      console.log('obj3', obj3);
+
+      // Clone an object
+
+      var obj4 = Object.assign({}, obj1);
+
+      obj4.a = -1;
+
+      console.log('Clone objects');
+      console.log('obj1', obj1);
+      console.log('obj4', obj4);
+
+      // Keys of an object
+
+      console.log('obj4 keys', Object.keys(obj4));
+
+      // Iteration of object keys
+
+      for(k in obj4) {
+        console.log(k, '=>', obj4[k]);
+      }
+
+    </script>
+  </body>
+</html>

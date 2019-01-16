@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Elements selectors</title>
+  </head>
+  <body>
+
+    <div>
+
+      <p id="paragraph1" class="light">
+        Paragraph 1
+      </p>
+
+      <p id="paragraph2">
+        Paragraph 2
+      </p>
+
+      <p class="dark">
+        Paragraph 3
+      </p>
+
+      <p id="paragraph4" class="light">
+        Paragraph 4
+      </p>
+
+      <p id="paragraph5">
+        Paragraph 5
+      </p>
+
+    </div>
+
+    <script>
+
+      // By Id
+
+      var p1 = document.getElementById('paragraph1');
+      console.log('paragraph1:', p1);
+
+      var p2 = document.getElementById('paragraph2');
+      //console.log(p2);
+
+      p2.className = 'dark';
+      console.log('paragraph2:', p2);
+
+      // By tag name
+
+      var ps = document.getElementsByTagName('p');
+      console.log(ps);
+
+      // By class name
+
+      var darkElements = document.getElementsByClassName('dark');
+      console.log('darkElements:', darkElements);
+
+      // Query selector (will be detailed with CSS lessons)
+
+      var lightElement = document.querySelector('.light');
+      console.log('lightElement:', lightElement);
+
+      // Query selector all
+
+      var lightElements = document.querySelectorAll('.light');
+      console.log('lightElements:', lightElements);
+
+      // innerHTML
+
+      var p4 = document.getElementById('paragraph4');
+      p4.innerHTML = 'Paragraph 4 edited!';
+
+      // Remove node
+
+      var p5 = document.getElementById('paragraph5');
+      p5.remove();
+
+    </script>
+  </body>
+</html>

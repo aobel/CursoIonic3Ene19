@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Not recommended</title>
+    <style>
+
+      .box {
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+      }
+
+      .box.small {
+        width: 80px;
+        height: 80px;
+      }
+
+      /* important */
+
+      #div1 {
+        background: lightpink !important;
+      }
+
+      #div1 {
+        background: lightblue;
+      }
+
+      /* float */
+
+      #div2 {
+        height: 150px;
+        border: 1px dotted black;
+      }
+
+      #div3 {
+        float: left;
+      }
+
+      #div4 {
+        float: right;
+      }
+
+      /* z-index */
+
+      #div5 {
+        position: relative;
+      }
+
+      #div6 {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: mediumpurple;
+        z-index: 1;
+      }
+
+      #div7 {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        background: lightgreen;
+        /* default z-index 0 */
+      }
+
+      /* Editing CSS third party libs source code:
+         Instead, you have to redefine the rules inheriting */
+
+    </style>
+  </head>
+  <body>
+
+    <div id="div1" class="box">
+
+    </div>
+
+    <br>
+
+    <div id="div2">
+      <div id="div3" class="box">
+
+      </div>
+
+      <div id="div4" class="box">
+
+      </div>
+    </div>
+
+    <br>
+
+    <div id="div5" class="box">
+      <div id="div6" class="box small">
+
+      </div>
+
+      <div id="div7" class="box small">
+
+      </div>
+    </div>
+
+  </body>
+</html>

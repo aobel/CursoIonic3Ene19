@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Positions</title>
+    <style>
+
+      .header {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 50px;
+        background: lightpink;
+        border-bottom: 1px solid gray;
+      }
+
+      .content {
+        position: absolute;
+        top: 51px;
+        right: 0;
+        bottom: 31px;
+        left: 0;
+        background: lightgreen;
+        overflow: auto;
+      }
+
+      .footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 30px;
+        background: lightblue;
+        border-top: 1px solid gray;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      ul li {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background: #EEE;
+        display: inline-block;
+        margin: 15px;
+      }
+
+      ul li .favourite {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        display: block;
+        width: 25px;
+        height: 25px;
+        /* Using images as background */
+        background: url('4 - star.png');
+        background-size: 100% 100%;
+      }
+
+      #relative-div {
+        position: relative;
+        left: 100px;
+        width: 200px;
+        height: 200px;
+        background: orange;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="header">
+
+    </div>
+
+    <div class="content">
+
+      <ul>
+        <li><p>Product01</p></li>
+        <li><p>Product02</p></li>
+        <li><p>Product03</p></li>
+        <li><p>Product04</p></li>
+        <li><p>Product05</p><div class="favourite"></div></li>
+        <li><p>Product06</p><div class="favourite"></div></li>
+        <li><p>Product07</p></li>
+        <li><p>Product08</p></li>
+        <li><p>Product09</p></li>
+        <li><p>Product10</p><div class="favourite"></div></li>
+        <li><p>Product11</p></li>
+        <li><p>Product12</p></li>
+        <li><p>Product13</p><div class="favourite"></div></li>
+        <li><p>Product14</p></li>
+        <li><p>Product15</p></li>
+        <li><p>Product16</p></li>
+        <li><p>Product17</p></li>
+        <li><p>Product18</p></li>
+      </ul>
+
+      <div id="relative-div">
+
+      </div>
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+  </body>
+</html>

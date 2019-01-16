@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Tables</title>
+    <style>
+
+      table th, table td {
+        width: 100px;
+        height: 50px;
+        padding: 0 10px;
+      }
+
+      table.bordered {
+        border-collapse: collapse;
+      }
+
+      table.bordered th, table.bordered td {
+        border: 1px solid black;
+      }
+
+      table.stripped {
+        border-collapse: collapse;
+      }
+
+      table.stripped tbody tr:nth-child(odd) td {
+        background: #EEE;
+      }
+
+      table.stripped thead th:not(:last-child),
+      table.stripped tbody td:not(:last-child) {
+        border-right: 1px solid black;
+      }
+
+      table.hover tbody tr:hover td {
+        background: #ffe6e8;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <table class="bordered">
+      <thead>
+      <tr>
+        <th></th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wen</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>8:00 - 9:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>9:00 - 10:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>10:00 - 11:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>...</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+
+    <br>
+
+    <table class="stripped hover">
+      <thead>
+      <tr>
+        <th></th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wen</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>8:00 - 9:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>9:00 - 10:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>10:00 - 11:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>...</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+
+    <br>
+
+    <table class="bordered stripped hover">
+      <thead>
+      <tr>
+        <th></th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wen</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>8:00 - 9:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>9:00 - 10:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>10:00 - 11:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>...</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+
+  </body>
+</html>

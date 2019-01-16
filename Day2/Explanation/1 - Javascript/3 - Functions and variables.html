@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Functions and variables</title>
+  </head>
+  <body>
+
+  <script>
+
+    // Function declarations
+
+    function func1() {
+      console.log('Hello world');
+    }
+
+    func1();
+
+    function func2(name) {
+      console.log('Hello', name);
+    }
+
+    func2('Posti');
+
+    var func3 = function(name) {
+      console.log('Hello', name);
+    };
+
+    func3('Posti');
+
+    // Variable scopes
+
+    var a = 1;
+    var b = 2;
+
+    var a = 1; // Duplicated declaration
+
+    function func4() {
+      var a = 3;
+      console.log(a);
+      console.log(b);
+    }
+
+    func4();
+
+    // Closures
+
+    (function() {
+      var a = 4;
+      console.log(a);
+    })();
+
+    // Global variables
+
+    globalVariable1 = 5;
+
+    console.log('globalVariable1:', globalVariable1);
+
+    function func5() {
+      var localVariable = 3;
+      globalVariable1 = 6;
+      globalVariable2 = 10;
+    }
+
+    func5();
+
+    console.log('globalVariable1:', globalVariable1);
+    console.log('globalVariable2:', globalVariable2);
+    console.log('localVariable:', localVariable);
+
+  </script>
+
+  <script>
+
+    (function() {
+      var a = 5;
+      console.log(a);
+    })();
+
+  </script>
+
+  <script>
+
+    // Data types
+
+    console.log('typeof 1:', typeof 1);
+    console.log('typeof "abc":', typeof 'abc');
+    console.log('typeof {a: 1, b:2}:', typeof {a: 1, b:2});
+    console.log('typeof [0, 1, 2]:', typeof [0, 1, 2]);
+    console.log('typeof func1:', typeof func1);
+    console.log('typeof someVar:', typeof someVar);
+
+    // == vs ===
+
+    var numberCero = 0;
+    var emptyString = '';
+
+    console.log('numberCero == 0:', numberCero == 0);
+    console.log('numberCero === 0:', numberCero === 0);
+
+    console.log('emptyString == \'\':', emptyString == '');
+    console.log('emptyString === \'\':', emptyString === '');
+
+    console.log('numberCero == \'\':', numberCero == '');
+    console.log('numberCero === \'\':', numberCero === '');
+
+    // setTimeout and setInterval
+
+    var to = setTimeout(function() {
+      console.log('Time out!');
+    }, 1500);
+
+    console.log('timeout id:', to);
+
+    var i = 1;
+    var interval = setInterval(function() {
+      console.log(i++);
+      if(i > 10) {
+        clearInterval(interval);
+      }
+    }, 1000);
+
+    console.log('interval id:', interval);
+
+  </script>
+
+  </body>
+</html>

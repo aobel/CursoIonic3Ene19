@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+  </head>
+  <body>
+    <script>
+
+      // Declaration
+
+      var array1 = [-2, -4, 6, 8, 10];
+
+      console.log(array1);
+
+      // Access elements
+
+      console.log('Postion 0:', array1[0]);
+      console.log('Postion 1:', array1[1]);
+
+      array1[0] = 2;
+      array1[1] *= -1;
+
+      console.log('Modified:', array1);
+
+      // Length
+
+      console.log('Array length:', array1.length);
+
+      // Push (append) elements
+
+      array1.push(12);
+
+      console.log('Pushed 12:', array1);
+
+      array1.push(14, 16);
+
+      console.log('Pushed 14 and 16:',array1);
+
+      // Concat with another array
+
+      array1.concat([18, 20]);
+
+      console.log('Concat [18, 20]:', array1);
+
+      var array2 = array1.concat([18, 20]);
+
+      console.log('Concat [18, 20] (new array):', array2);
+
+      //Prepend element
+
+      array2.unshift(0);
+
+      console.log('Prepend 0:', array2);
+
+      // Index of an element
+
+      console.log('Index of 4:', array2.indexOf(4));
+
+      console.log('Index of 5:', array2.indexOf(5));
+
+      // Check if an element exists (includes() is part of ES6)
+
+      console.log('Exists 4?:', array2.indexOf(4) > -1);
+
+      console.log('Exists 5?:', array2.indexOf(5) > -1);
+
+      // Reverse
+
+      array1.reverse();
+
+      console.log('array1 reversed:', array1);
+
+      // Remove last element from array
+
+      var lastElem = array2.pop();
+
+      console.log('Removed last element:', array2);
+      console.log('Element removed:', lastElem);
+
+      // Remove first element from array
+
+      var firstElem = array2.shift();
+
+      console.log('Removed first element:', array2);
+      console.log('Element removed:', firstElem);
+
+      // Subarray
+
+      var subArray = array2.slice(1, 3);
+
+      console.log('Sub array:', subArray);
+      console.log('The array is the same:', array2);
+
+      // Remove some elements from array
+
+      array2.splice(2, 1); // Remove 1 element from position 2
+
+      console.log('Result:', array2);
+
+      // Iterate elements from array
+
+      array2.forEach(function(x, i) {
+        console.log('index:', i, ', element:', x);
+      });
+
+      // Return array with filtered elements
+
+      var filteredArray = array2.filter(function(x) {
+        return x % 4 === 0;
+      });
+
+      console.log('Multiple of 4 elements:', filteredArray);
+
+      // Map elements of an array
+
+      var mappedArray = array2.map(function(x) {
+        if(x % 4 === 0) {
+          return x * -1;
+        } else {
+          return x;
+        }
+      });
+
+      console.log('Multiple of 4 elements x-1:', mappedArray);
+
+      // Implode strings
+
+      var splitedString = ['Hello', 'world,', 'I\'m', 'Posti'];
+
+      console.log('Joined string:', splitedString.join(' '));
+
+    </script>
+  </body>
+</html>

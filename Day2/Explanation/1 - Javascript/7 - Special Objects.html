@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Special Objects</title>
+  </head>
+  <body>
+    <script>
+
+      // Date
+
+      var now = new Date();
+
+      console.log('UNIX epoch:', now.getTime());
+
+      var dd = now.getDate();
+      var mm = now.getMonth() + 1; //January is 0!
+      var yyyy = now.getFullYear();
+
+      if(dd < 10) {
+        dd = '0' + dd
+      }
+
+      if(mm < 10) {
+        mm = '0' + mm
+      }
+
+      var strDate = dd + '/' + mm + '/' + yyyy;
+
+      console.log('Current date:', strDate);
+
+      // It is better using moment.js
+
+      // Math
+
+      // round
+      console.log('Math.round(1.3):', Math.round(1.3));
+      console.log('Math.round(1.7):', Math.round(1.7));
+
+      // floor
+      console.log('Math.floor(1.3):', Math.floor(1.3));
+      console.log('Math.floor(1.7):', Math.floor(1.7));
+
+      // ceil
+      console.log('Math.ceil(1.3):', Math.ceil(1.3));
+      console.log('Math.ceil(1.7):', Math.ceil(1.7));
+
+      // absolute value
+      console.log('Math.abs(-1):', Math.abs(-1));
+      console.log('Math.abs(1):', Math.abs(1));
+
+      // pow
+      console.log('Math.pow(2, 4):', Math.pow(2, 4));
+
+      // sqrt
+      console.log('Math.sqrt(16):', Math.sqrt(16));
+
+      // random
+      console.log('Math.random():', Math.random());
+
+      // parse numbers
+
+      var n25 = parseInt('25');
+      console.log('n25:', n25);
+
+      var invalidInt = parseInt('aaa');
+      console.log('invalidInt:', invalidInt);
+
+      var n125 = parseFloat('1.25');
+      console.log('n125:', n125);
+
+      var invalidFloat = parseInt('aaa');
+      console.log('invalidFloat:', invalidFloat);
+
+      // JSON
+
+      var json = {
+        a: 1,
+        b: 2
+      };
+
+      console.log('json:', json);
+
+      console.log('JSON.stringify(json):', JSON.stringify(json));
+
+      console.log('JSON.parse(...):', JSON.parse('{"c": 3}'));
+
+      try {
+        JSON.parse('{"d": 4 : :}')
+      } catch(e) {
+        console.log(e);
+      }
+
+    </script>
+  </body>
+</html>

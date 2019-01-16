@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Colors</title>
+    <style>
+
+      /* Tags */
+
+      body {
+        font-family: sans-serif;
+      }
+
+      /* Ids */
+
+      #div2 {
+        background: lightpink;
+      }
+
+      #div3 {
+        background: lightgreen;
+      }
+
+      #div3 { /* Redefined! */
+        background: lightblue;
+      }
+
+      /* Classes */
+
+      div.box {
+        width: 100px;
+        height: 100px;
+      }
+
+      .important-text { /* could be a div, or not! */
+        font-weight: bold;
+        color: red;
+      }
+
+      /*
+
+      Cascade and inheritance:
+
+        1. Importance
+        2. Specificity
+        3. Source order
+
+      Units
+
+        - px
+        - %
+        - em
+        - pt
+          ...
+
+       */
+
+      /* Same rules for multiple selectors */
+
+      #div4, #div5 {
+        background: silver;
+      }
+
+      /* Childs */
+
+      #shopping-list li {
+        color: blue;
+      }
+
+      #todo-list > li {
+        color: green;
+      }
+
+      /* Brother */
+
+      #div5 + div {
+        background: orange;
+      }
+
+      /* :first-child, :last-child */
+
+      #shopping-list li:first-child {
+        color: red;
+      }
+
+      #todo-list li:last-child {
+        color: orange;
+      }
+
+      /* :not */
+
+      #numbers-list {
+        width: 100px;
+        list-style: none;
+      }
+
+      #numbers-list li {
+        padding: 5px;
+      }
+
+      #numbers-list li:not(:first-child) {
+        border-top: 1px solid black;
+      }
+
+      /* li:nth-child(even), li:nth-child(odd)*/
+
+      #numbers-list li:nth-child(odd) {
+        background: #b8ffbb;
+      }
+
+      #numbers-list li:nth-child(even) {
+        background: #EEE;
+      }
+
+      /* li:nth-child(n) */
+
+      #numbers-list li:nth-child(5) {
+        background: #ffc9fe;
+      }
+
+      /* hover */
+
+      #div2:hover {
+        background: indianred;
+        color: white;
+      }
+
+      /* Complex selectors */
+
+      #checkbox-input:checked + #checkbox-state .is-checked,
+      #checkbox-input:not(:checked) + #checkbox-state .not-is-checked {
+        display: block;
+      }
+
+      #checkbox-input:checked + #checkbox-state .not-is-checked,
+      #checkbox-input:not(:checked) + #checkbox-state .is-checked {
+        display: none;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div id="div1">
+      Div1
+    </div>
+
+    <div id="div2" class="box">
+      Div2
+    </div>
+
+    <div id="div3" class="box important-text">
+      Div3
+    </div>
+
+    <div id="div4" class="box">
+      Div4
+    </div>
+
+    <div id="div5" class="box">
+      Div5
+    </div>
+
+    <div class="box">
+      Div6
+    </div>
+
+    <ul id="shopping-list">
+      <li>Milk</li>
+      <li>Vegetables</li>
+      <li>Bread</li>
+    </ul>
+
+    <ul id="todo-list">
+      <li>Go to work</li>
+      <li>Do the shopping</li>
+      <li>Go to the gym</li>
+    </ul>
+
+    <ul id="numbers-list">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+    </ul>
+
+    <input id="checkbox-input" type="checkbox">
+    <div id="checkbox-state">
+      <p class="is-checked">Is checked</p>
+      <p class="not-is-checked">Is NOT checked</p>
+    </div>
+
+  </body>
+</html>

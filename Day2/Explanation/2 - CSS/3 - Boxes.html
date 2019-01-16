@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Boxes</title>
+    <style>
+
+      body {
+        font-family: sans-serif;
+      }
+
+      /* margin, padding, border */
+
+      .message {
+        margin: 15px;
+        padding: 10px;
+        border: 3px solid;
+      }
+
+      .message .title {
+        font-weight: bold;
+        margin-bottom: 3px;
+      }
+
+      .message.success {
+        background: lightgreen;
+        border-color: green;
+      }
+
+      .message.success .title {
+        color: green;
+      }
+
+      .message.error {
+        background: lightpink;
+        border-color: red;
+      }
+
+      .message.error .title {
+        color: red;
+      }
+
+      /*
+
+      margin: 0;
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+
+      border: 5px 10px;
+      border-top: 5px;
+      border-right: 10px;
+      border-bottom: 5px;
+      border-left: 10px;
+
+      padding: 5px 10px 15px 20px;
+      padding-top: 5px;
+      padding-right: 10px;
+      padding-bottom: 15px;
+      padding-left: 20px;
+
+       */
+
+      /* Widht, height */
+
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+
+      /* Display */
+
+      .box.block {
+        display: block;
+        background: #DDD;
+      }
+
+      .box.invisible {
+        display: none;
+      }
+
+      .box.inline-block {
+        display: inline-block;
+        background: orange;
+      }
+
+      /* border radius */
+
+      .purple {
+        background: mediumpurple;
+      }
+
+      .rounded-box {
+        border-radius: 15px;
+      }
+
+      .circle {
+        border-radius: 50%;
+      }
+
+      /* Center a div horizontally */
+
+      .horizontally-centered {
+        margin: 0 auto;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="message">
+      <div class="title">Message title</div>
+      <div class="content">Message content</div>
+    </div>
+
+    <div class="message success">
+      <div class="title">Success title</div>
+      <div class="content">Success content</div>
+    </div>
+
+    <div class="message error">
+      <div class="title">Error title</div>
+      <div class="content">Error content</div>
+    </div>
+
+    <div class="box block">
+    </div>
+
+    <div class="box block">
+    </div>
+
+    <div class="box block">
+    </div>
+
+    <div class="box invisible">
+    </div>
+
+    <div class="box inline-block">
+    </div>
+
+    <div class="box inline-block">
+    </div>
+
+    <div class="box inline-block">
+    </div>
+
+    <div class="box purple rounded-box">
+    </div>
+
+    <div class="box purple circle">
+    </div>
+
+    <div class="box block horizontally-centered">
+    </div>
+
+  </body>
+</html>

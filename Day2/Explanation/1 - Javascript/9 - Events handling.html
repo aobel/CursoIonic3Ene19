@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Events handling</title>
+  </head>
+  <body>
+
+    <p>
+      <button onclick="onButton1Pressed()">Button 1</button>
+    </p>
+    <p>
+      <button id="button2">Button 2</button>
+    </p>
+    <p>
+      <button id="button3">Button 3</button>
+    </p>
+    <p>
+      <button id="button4">Button 4</button>
+    </p>
+    <p>
+      <input type="text" name="username">
+      <button id="submit">Submit</button>
+    </p>
+
+    <script>
+
+      // Button 1
+
+      function onButton1Pressed() {
+        console.log('button 1 pressed');
+      }
+
+      // Button 2
+
+      function onButton2Pressed(event) {
+        console.log('button 2 pressed', event);
+      }
+
+      var button2 = document.getElementById('button2');
+      button2.addEventListener('click', onButton2Pressed);
+
+      // Button 3
+
+      document.getElementById('button3').addEventListener('click', function(event) {
+        console.log('button 3 pressed', event);
+      });
+
+      // Button 4
+
+      document.getElementById('button4').addEventListener('click', function(event) {
+        event.target.innerHTML = 'Changed!';
+      });
+
+      // Submit button
+
+      var nameInput = document.querySelector('input[name="username"]');
+
+      document.getElementById('submit').addEventListener('click', function() {
+        //console.log(nameInput);
+        //console.log({input: nameInput});
+        console.log('Sent input value: ' + nameInput.value);
+      });
+
+      // Input event
+
+      nameInput.addEventListener('input', function() {
+        console.log('Current input value: ' + nameInput.value);
+      });
+
+      // Change event
+
+      nameInput.addEventListener('change', function() {
+        console.log('Input changed: ' + nameInput.value);
+      });
+
+      // Focus event
+
+      nameInput.addEventListener('focus', function() {
+        console.log('User is editing the input');
+      });
+
+      // Blur event
+
+      nameInput.addEventListener('blur', function() {
+        console.log('User finished editing the input');
+      });
+
+      // All events: https://developer.mozilla.org/en-US/docs/Web/Events
+
+    </script>
+  </body>
+</html>

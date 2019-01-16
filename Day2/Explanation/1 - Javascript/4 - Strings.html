@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Strings</title>
+  </head>
+  <body>
+    <script>
+
+      var s = 'Hello';
+
+      // Concat
+
+      s = s + ' world';
+
+      // Length
+
+      console.log('String length:', s.length);
+
+      // Starts with
+
+      console.log('Starts with "bye":', s.startsWith('bye'));
+      console.log('Starts with "Hello":', s.startsWith('Hello'));
+
+      // Ends with
+
+      console.log('Starts with "bye":', s.endsWith('bye'));
+      console.log('Starts with "world":', s.endsWith('world'));
+
+      // Index of
+
+      console.log('Index of "world":', s.indexOf('world'));
+      console.log('Index of "something":', s.indexOf('something'));
+
+      // Contains
+
+      console.log('Contains "world"?:', s.indexOf('world') > -1);
+      console.log('Contains "something"?:', s.indexOf('something') > -1);
+
+      // Chars
+
+      for(var i = 0; i < s.length; i++) {
+        console.log(i, s[i]);
+      }
+
+      s[6] = '-';
+
+      console.log('Modified string?:', s);
+
+      // To lower case
+
+      s.toLowerCase();
+      console.log('To lower case (1):', s);
+
+      s = s.toLowerCase();
+      console.log('To lower case (2):', s);
+
+      // To upper case
+
+      s = s.toUpperCase();
+      console.log('To upper case:', s);
+
+      // Replace
+
+      s = s.replace('HELLO', 'BYE');
+      console.log('Replaced string:', s);
+
+    </script>
+  </body>
+</html>
